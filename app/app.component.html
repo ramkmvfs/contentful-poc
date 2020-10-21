@@ -1,0 +1,16 @@
+<div *ngFor="let article of articles" class="article">
+  <h1 class="article_title">{{ article.fields.title }}</h1>
+  <div class="article_body">{{ article.fields.step1MainHeading }}</div>
+  <div
+    class="article_body"
+    [innerHtml]="_returnHtmlFromRichText(article.fields.step1MainDescription)"
+  ></div>
+
+  <div class="article_body">{{ article.fields.step1SubHeading }}</div>
+  <div
+    class="article_body"
+    [innerHtml]="_returnHtmlFromRichText(article.fields.step1SubDescription)"
+  ></div>
+
+  <div class="article_body">{{ article.fields.visaSectionHeading }}</div>
+</div>
